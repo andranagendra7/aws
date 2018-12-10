@@ -1,0 +1,65 @@
+linux commands:
+
+ssh user@ip  
+
+ssh -i pem-key user@ip 
+
+scp -i pem-key  filepath user@ip:/home/user/.
+
+scp -i pem-key -r  filepath user@ip:/home/user/.
+
+aws commands:
+
+aws ec2 describe-instances
+
+
+volume partion:
+
+>> fdisk -l 
+
+>> fdisk <device-name>
+
+>> :n 
+
+>> p
+
+>> select or enter  sector number
+
+>>enter or select the sector-id
+
+>> enter  the partion size +G,M
+
+>>W
+
+>>lsblk
+
+now we add to the kernal:
+
+>>partx /dev/xvdf2
+
+now we create file system
+
+>>mk
+
+ebs volumes:
+-----------
+
+aws ec2 describe-volumes
+
+aws ec2 describe-volume-status
+
+To create-volume:
+----------------
+
+aws ec2 create-volume --size < > --region < > --availability-zone < > --volume-type < >
+
+
+To attach-volume:
+-----------------
+
+aws ec2 attach-volume --volume-id < > --instance-id < > --device <customize-name>
+
+example:
+-------
+>> aws ec2 attach-volume --volume-id vol-06b999c3767d10e35 --instance-id           i-0da8769744622020f --device /dev/xvdf
+

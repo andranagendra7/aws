@@ -1,0 +1,21 @@
+aws lambda:
+----------
+
+step : To create the aws lambda_function --> enter the function_name -> select language --> choose the role --> click o
+
+
+lambda_function: script for stop the aws instance
+
+import json
+import boto3 
+
+
+
+def lambda_handler(event, context):
+    region      = "us-east-1"
+    instance_id =['i-01b57517ef3b62741']
+    ec2 = boto3.client('ec2', region_name=region)
+    ec2.stop_instances(InstanceIds=instance_id)
+    print 'stopped your instances: ' + str(instance_id)
+   
+    

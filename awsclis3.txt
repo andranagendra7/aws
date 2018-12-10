@@ -1,0 +1,70 @@
+ >> sudo yum makecache
+ >> yum install python3-pip
+ >> pip3 --version
+ 
+ 
+ s3:
+ 
+ aws s3 ls --> list of buckets
+ 
+ aws s3 mb s3://<< bucket_name >> --> To create a bucket 
+ 
+ aws s3 create-bucket << bucket_name >> --region << >> 
+ 
+  aws s3api create-bucket --bucket << bucket_name >>  --region <<different region >>  --create-bucket-configuration LocationConstraint=<<different region >>
+ 
+ aws s2api list-buckets  --> to list of bucket's
+ 
+ 
+ 
+ aws s3api list-buckets --query "awsdeploynewapp1" --> to see perticular bucket information 
+ 
+
+ 
+up-loding file's:
+
+
+aws s3 cp local-path s3://<busketname>  --> To upload file local-path to s3 bucket
+
+aws s3 cp  s3://<busketname>/< object-name >  s3://<busketname>/<object-name> -->to copy the data bucket to bucket
+
+aws s3 cp  s3://nagendra517/awsclis3.txt  <filename> --> to download file s3 bucket to local path
+ 
+ aws s3 ls s3://nagendra517  --> list of files 
+ 
+ aws s3 dir s3://<bucket_name> --recursive --> To copy
+ 
+ -------------
+ 
+ To remove the objects:
+ 
+>> aws s3 rm s3://<bucket_name>>/<object-name> --> to delete the single object
+  
+ aws s3 rm s3://nagendra517/awsclifile       
+ 
+>> aws s3 rm s3://bucket-name --recursive    to delete the multiple objects
+   
+aws s3 rm s3://nagendra517 --recursive
+
+>>aws s3api delete-object --bucket bucket_name --key object-name
+ 
+ 
+ 
+To delete bucket:
+
+ aws s3api delete-bucket --bucket my-bucket --region us-east-1  --> To delete the bucket 
+ 
+ aws s3 rb  s3://nagendra518 --force
+
+
+aws iam create-user --user-name nagendra --> To create the user 
+ 
+ aws iam create-group  --group-name root --> To create the group
+ 
+ policies:
+ 
+ aws iam list-policies
+ 
+ 
+ aws iam get-user --user-name nagendra
+ 

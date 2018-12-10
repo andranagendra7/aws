@@ -1,0 +1,6 @@
+awscli:
+
+s3:
+
+aws s3api list-buckets --> bucket information
+
