@@ -1,0 +1,102 @@
+New words:
+
+inexplicably: unaccountable 
+scads       : a large number  or quantity
+  
+ 
+ To install docker in aws linux:
+ 
+ sudo amazon-linux-extras install docker
+ 
+ wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+
+
+Aws Rds:
+
+
+To connect the mysql rds database from  linux machine connection:
+---------------------------------------------
+step 1: we need to install the mysql package and start the servr 
+
+Note:  if we use centos 7 or redhat, aws linux, we need to below follow steps.
+
+>> wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+
+>> sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+
+>> yum update -y 
+
+>> yum install -y mysql-server
+
+>> systemctl start mysqld 
+
+step 2: Now, if we need to connect the rds-mysql database, we have to use below method.
+  
+>> mysql -h mysqldb.cxmxmo66surr.us-east-1.rds.amazonaws.com -u deployer1 -P 
+
+password:
+
+>>use db_name 
+
+>> create database <db_name>
+exit()
+
+---------------------------------------------------
+
+
+linux commands:
+
+sudo su
+hostname
+pwd
+ls 
+awk -F: {"print $1"} file_name
+cut -D: f1 file_name 
+sed "s/pattern1/pattern2/g" file_name
+sed 1p file_name
+cd
+cat
+cut
+cal
+cat /etc/passwd
+cat /etc/shadow
+cat /etc/os-release
+cat /proc/version
+test
+date
+dpkg -i package
+df -h 
+fdisk -l 
+free 
+history
+lsblk
+mv
+mkdir
+mkdir -p 
+passwd
+ssh user@ip
+scp file_name user@ip:desitination
+rm
+rmdir
+touch
+file
+tac
+top
+free
+host
+useradd name
+adduser name
+getent passwd
+compgen -u
+awk -F: '{ print $1}' /etc/passwd
+file system:
+lsblk -f
+cat /etc/fstab
+mount
+findmnt
+
+ 
+
+
+

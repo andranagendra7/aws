@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: a install ec2 server
+Resources: 
+    MyEC2Instance:
+         Type: AWS::EC2::Instance
+         Properties: 
+             ImageId: ami-011b3ccf1bd6db744
+             InstanceType: t2.micro
+             Key-pair: deploy
+             
